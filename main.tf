@@ -7,11 +7,6 @@ terraform {
   }
 }
 
-module "s3-bucket" {
-  source  = "app.terraform.io/moodys-chris-symons/s3-bucket/aws"
-  version = "2.8.0"
-}
-
 provider "aws" {
   region  = var.region
 }
