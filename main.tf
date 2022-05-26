@@ -2,9 +2,14 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "=4.5"
+      version = "=3.42.0"
     }
   }
+}
+
+module "s3-bucket" {
+  source  = "app.terraform.io/moodys-chris-symons/s3-bucket/aws"
+  version = "2.8.0"
 }
 
 provider "aws" {
